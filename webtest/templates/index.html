@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>number</th>
+                <th>name</th>
+            </tr>
+            {% for data in sqlserverconn %}
+            <tr>
+
+                <td> {{data.number}}</td>
+                <td>{{data.firstname}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</head>
