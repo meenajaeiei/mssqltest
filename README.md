@@ -1,3 +1,7 @@
+<h1>วิธีใช้</h1>
+
+docker run  -e dbip=1.1.1.1 -e dbname=dbtest -e dbuser=sa -e dbpass=123456 mssql-container 
+
 <h1>default env</h1>
  dbip=10.33.0.199<br>
  dbname=defaultdb123<br>
