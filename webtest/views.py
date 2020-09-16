@@ -13,6 +13,8 @@ def connsql(request):
     return render(request , 'index.html' , {'sqlserverconn':query()})
 
 def insert(request):
+    conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER='+db_ip+'; DATABASE='+db_name+'; UID='+db_username+'; PWD='+db_password)
+    cursor=conn.cursor()
     cursor.execute("INSERT INTO  test123 VALUES (1234,'CREATED_BY_DJANGO') ")
     cursor.commit()
     return render(request , 'index.html' , {'sqlserverconn':query()})
@@ -55,7 +57,6 @@ def query():
     password = '1qazXSW@'
     print('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
     conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER='+db_ip+'; DATABASE='+db_name+'; UID='+db_username+'; PWD='+db_password)
-    global cursor
     cursor=conn.cursor()
     cursor.execute("select * from test123")
     result=cursor.fetchall()
