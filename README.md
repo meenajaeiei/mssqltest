@@ -9,8 +9,8 @@ docker run  -e dbip=1.1.1.1 -e dbname=dbtest -e dbuser=sa -e dbpass=123456 mssql
  dbpass=1qazXSW@<br>
 
 <h1> path list </h1>
-/ = select * from test123 (ต้องมีข้อมูลก่อน ถ้าไม่มีให้เข้า /insert เดียวมันสร้างให้) <br>
-/insert = insert data into table (ต้องมี table  ก่อน ถ้าไม่มีให้เข้า/createtable เดียวมันสร้างให้) <br>
+/ = select * from test123 (ต้องมีข้อมูลก่อน ถ้าไม่มี ให้เข้า /insert เดียวมันinsert ข้อมูลให้) <br>
+/insert = insert data into table (ต้องมี table  ก่อน ถ้าไม่มี ให้เข้า/createtable เดียวมันสร้างtableให้) <br>
 /createdb = create databases; "ENV-dbname" <br>
-/createtable = create table ( ต้องมี db ก่อน ถ้าไม่มีให้เข้า /createdb เดียวมันสร้างให้)
+/createtable = create table ( ต้องมี db ก่อน ถ้าไม่มี ให้เข้า /createdb เดียวมันสร้างdbให้)
 
