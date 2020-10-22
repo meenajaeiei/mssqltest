@@ -3,14 +3,16 @@
     <body>
         <table border="1">
             <tr>
-                <th>number</th>
+                <th>id</th>
                 <th>name</th>
+                <th>address</th>
             </tr>
             {% for data in sqlserverconn %}
             <tr>
 
-                <td> {{data.number}}</td>
-                <td>{{data.firstname}}</td>
+                <td> {{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.address}}</td>
             </tr>
             {% endfor %}
         </table>

@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+import os
+
+paths = os.getenv('webpath')
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.connsql),
-    path('insert',views.insert),
-    path('createdb',views.createdb),
-    path('createtable',views.createtable),
+
+    path(paths+'/admin/', admin.site.urls),
+    path(paths+'',views.connsql),
+    path(paths+'/insert',views.insert),
+    path(paths+'/createdb',views.createdb),
+    path(paths+'/createtable',views.createtable),
+    #path('test',views.test),
 ]
